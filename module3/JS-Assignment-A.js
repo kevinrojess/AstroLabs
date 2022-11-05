@@ -70,6 +70,7 @@ for (let i = 0; i < cities.length; i++) {
 
 //------------------------------------------------------------------------------//
 
+console.log("-----------");
 // METHOD: 1
 // for (let i = 0; i < cities.length; i++) {
 //   if (cities[i] === "???") {
@@ -78,16 +79,15 @@ for (let i = 0; i < cities.length; i++) {
 //     console.log(`${i + 1}. ${cities[i]}, ${countries[i]}`);
 //   }
 // }
-console.log("-----------");
 
 // METHOD: 2
-for (let i = 0; i < countries.length; i++) {
-  if (cities[i] === "???") {
-    console.log("Oops");
-  } else {
-    console.log(cities[i], ": ", countries[i]);
-  }
-}
+// for (let i = 0; i < countries.length; i++) {
+//   if (cities[i] === "???") {
+//     console.log("Oops");
+//   } else {
+//     console.log(cities[i], ": ", countries[i]);
+//   }
+// }
 
 // METHOD: 3
 // cities.forEach((city, i) => {
