@@ -73,13 +73,13 @@ var countries = [
 // }
 
 // METHOD: 2
-for (let i = 0; i < countries.length; i++) {
-  if (cities[i] === "???") {
-    console.log("Oops");
-  } else {
-    console.log(cities[i], ": ", countries[i]);
-  }
-}
+// for (let i = 0; i < countries.length; i++) {
+//   if (cities[i] === "???") {
+//     console.log("Oops");
+//   } else {
+//     console.log(cities[i], ": ", countries[i]);
+//   }
+// }
 
 // METHOD: 3
 // cities.forEach((city, i) => {
@@ -118,10 +118,11 @@ for (let i = 0; i < countries.length; i++) {
 // }
 
 //METHOD: 7
-// const data = Array.from(
-//   { length: Math.max(cities.length, countries.length) },
-//   (v, i) => ({
-//     country: countries[i] || "",
-//     city: cities[i] || "",
-//   })
-// );
+const data = Array.from(
+  { length: Math.max(cities.length, countries.length) },
+  (v, i) => ({
+    country: countries[i] || "",
+    city: cities[i] || "",
+  })
+);
+console.log(data);
