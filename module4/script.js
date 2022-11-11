@@ -4,10 +4,7 @@
 // alert("YOU HAVE A VIRUS!!!!");
 // prompt("What is your name?");
 
-
 // alert("Good Morning" + " " + "Mohammad" + "!");
-
-
 
 // 2. Variable
 // --------------------------------------------
@@ -17,14 +14,10 @@
 // username = "Doe";
 // alert(username);
 
-
 // var firstname = "Dany";
 // alert("Good Morning" + " " + firstname + "!");
 
-
 // alert("Line 1" + "\n" + "Line 2" + "\n" + "Line 3")
-
-
 
 // 3. Variable Naming Rules
 // --------------------------------------------
@@ -41,9 +34,6 @@
 // // Snake Case
 // var my_favorite_song_band = "Metallica";
 
-
-
-
 // 4. Control Statements
 // --------------------------------------------
 
@@ -54,16 +44,14 @@
 
 // if( price <= budget ) {
 //     alert("Buy");
-// } 
+// }
 // else {
 //     alert("Don't Buy");
 // }
 
-
 // if("5" == 5) {
 //     alert("Yes")
 // }
-
 
 // iPhone14, S22, Pixel5
 // 3500, 3200, 2900
@@ -83,8 +71,6 @@
 //     alert("Product not available");
 // }
 
-
-
 // 4.2 While
 // var number = 1;
 
@@ -98,31 +84,13 @@
 //     alert(currentNumber);
 // }
 
+var cities = ["Abu Dhabi", "Beijing", "Beirut", "Boston", "Cairo", "Mumbai"];
 
-
-var cities =  [ 
-    "Abu Dhabi",
-    "Beijing",
-    "Beirut",
-    "Boston",
-    "Cairo",
-    "Mumbai"
-];
-
-
-for( var index = 0; index < 6; index++ ) {
-    console.log( cities[index] ) ;
+for (var index = 0; index < 6; index++) {
+  console.log(cities[index]);
 }
 
-
-
-
-
 // 4.4 Switch
-
-
-
-
 
 // 5. Operators
 // --------------------------------------------
@@ -150,8 +118,6 @@ for( var index = 0; index < 6; index++ ) {
 //      -=
 //      *=
 
-
-
 // 6. Data Structures: Array
 // --------------------------------------------
 
@@ -164,32 +130,27 @@ for( var index = 0; index < 6; index++ ) {
 //     "London",           // 1
 // ];
 
-
-// Retrieving value from array 
+// Retrieving value from array
 // console.log(cities[2]);
 
-
 // Array methods:
-// 
+//
 
 // .push()                                  Adds element to end
-// .pop()                                   Removes elements from end 
+// .pop()                                   Removes elements from end
 // .unshift()                               Adds element to start
 // .shift()                                 Removes elements from start
 // .splice(index, noDelete, itemsAdd)       Add or remove element from anywhere
-
 
 // cities.push('Mumbai');
 // console.log(cities);
 
 // cities.pop();
 
-
 // cities.unshift('Abu Dhabi');
 // console.log(cities);
 
 // cities.shift();
-
 
 // // Adding with splice
 // cities.splice(2, 0, 'Cairo');
@@ -202,10 +163,6 @@ for( var index = 0; index < 6; index++ ) {
 // // Replace with splice
 // cities.splice(1,1,'Boston');
 // console.log(cities);
-
-
-
-
 
 // 7. Data Types
 // --------------------------------------------
@@ -220,15 +177,12 @@ for( var index = 0; index < 6; index++ ) {
 // NaN
 // Date
 
-
-
 // 8. Data Structures: Objects
 // --------------------------------------------
 
-
 // Array
 // var cities = [
-//     "Abu Dhabi",        // 0 
+//     "Abu Dhabi",        // 0
 //     "Berlin",           // 1
 //     "London",           // 2
 //     "Mumbai"            // 3
@@ -236,18 +190,12 @@ for( var index = 0; index < 6; index++ ) {
 
 // cities[3];
 
-
-
 // var cities = {
-//     0: "Abu Dhabi",        // 0 
+//     0: "Abu Dhabi",        // 0
 //     1: "Berlin",           // 1
 //     2: "London",           // 2
 //     3: "Mumbai"            // 3
 // };
-
-
-
-
 
 // // Object
 // var cities_obj = {
@@ -263,11 +211,6 @@ for( var index = 0; index < 6; index++ ) {
 // // dot-syntax
 // cities_obj.India
 
-
-
-
-
-
 // var airports = [
 
 //     ["Abu Dhabi"    , "UAE"     , "AUH",    ""],
@@ -279,7 +222,6 @@ for( var index = 0; index < 6; index++ ) {
 // airports[0][2]  // AUH
 // airports[0][0]  // Abu Dhabi
 // airports[1][1]  // UAE
-
 
 // var users = {
 //     "u001": {
@@ -294,11 +236,7 @@ for( var index = 0; index < 6; index++ ) {
 //     }
 // }
 
-
 // users['u001']['preferences'][0]
-
-
-
 
 // var countries = {
 //     'UAE': 'Abu Dhabi',
@@ -309,9 +247,6 @@ for( var index = 0; index < 6; index++ ) {
 // // Adding element to object
 // countries['Turkey'] = 'Amsterdam';
 
-
-
-
 // var countries = {
 //     'UAE': 'Abu Dhabi',
 //     'UK': 'London',
@@ -321,8 +256,6 @@ for( var index = 0; index < 6; index++ ) {
 
 // // Reassign value
 // countries['Turkey'] = 'Ankara';
-
-
 
 // var countries = {
 //     'UAE': 'Abu Dhabi',
@@ -335,9 +268,6 @@ for( var index = 0; index < 6; index++ ) {
 // // Deleting element from object
 // delete countries['iPhone14']
 
-
-
-
 // 9. Function
 // --------------------------------------------
 
@@ -345,10 +275,8 @@ for( var index = 0; index < 6; index++ ) {
 //     return "your drink"
 // }
 
-
 // var order1 = coffeeMachine('light roast', 'americano', 'dairy', 'hot');
 // var order2 = coffeeMachine('dark roast', 'latter', 'dairy', 'hot');
-
 
 // function registerUser() {
 //     var firstName = prompt("What is your first name?");
@@ -365,14 +293,9 @@ for( var index = 0; index < 6; index++ ) {
 //     );
 // }
 
-
-
-
-
 // 10. Strings
 // --------------------------------------------
-var alphabet = 'ABCDE';
-
+var alphabet = "ABCDE";
 
 // var alphabet = {
 //     0: 'A',
@@ -383,8 +306,6 @@ var alphabet = 'ABCDE';
 //     'length': 5
 // }
 
-
-
 // String methods
 // https://www.w3schools.com/js/js_string_methods.asp
 // .toUpperCase()
@@ -394,27 +315,24 @@ var alphabet = 'ABCDE';
 // .parseInt()
 // .indexOf
 
-
 // Change letter casing
-alphabet = 'abcde';
-alphabet.toUpperCase() // 'ABCDEF'
+alphabet = "abcde";
+alphabet.toUpperCase(); // 'ABCDEF'
 
 // Get a slice of a string
-var address = 'AstroLabs, Cluster R, JLT, Dubai, UAE';
-address.slice(0,9)      // 'AstroLabs'
+var address = "AstroLabs, Cluster R, JLT, Dubai, UAE";
+address.slice(0, 9); // 'AstroLabs'
 
-var someName = 'AstroLabs';
-someName.slice(5)       // 'Labs'
-
+var someName = "AstroLabs";
+someName.slice(5); // 'Labs'
 
 // Get index of the first matching character
-alphabet = 'acbde';
-alphabet.indexOf('e')
+alphabet = "acbde";
+alphabet.indexOf("e");
 
 // Split string into an array
-var theDate = '04/11/2022';
-
+var theDate = "04/11/2022";
 
 // Join array into a string
-address = ['AstroLabs', 'Cluster R', 'JLT', 'Dubai', 'UAE']
-address.join(', ') // "AstroLabs, Cluster R, JLT, Dubai, UAE"
+address = ["AstroLabs", "Cluster R", "JLT", "Dubai", "UAE"];
+address.join(", "); // "AstroLabs, Cluster R, JLT, Dubai, UAE"

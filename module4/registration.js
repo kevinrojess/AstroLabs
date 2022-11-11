@@ -8,6 +8,8 @@ function register() {
   var lastNameField = fields[1];
   var emailField = fields[2];
   var passwordField = fields[3];
+  var termsConditionsField =
+    document.getElementsByClassName("form-check-input")[0];
 
   var errors = [];
 
@@ -33,14 +35,20 @@ function register() {
     errors.push("Please enter your password");
   }
 
+  if (termsConditionsField.checked === false) {
+    errors.push("Please read and accept the terms & conditions");
+  }
+
   // 8. Reset the state of the alert boxes
   var errorsAlertBox = document.getElementsByClassName("alert-danger")[0];
   errorsAlertBox.className = "alert alert-danger mt-3 d-none";
   errorsAlertBox.innerHTML = "";
 
+  var successAlertBox = document.getElementsByClassName("alert-success")[0];
+  successAlertBox.className = "alert alert-success mt-3 d-none";
+
   // 5. Reveal results to user
   if (errors.length > 0) {
-    var errorsAlertBox = document.getElementsByClassName("alert-danger")[0];
     errorsAlertBox.classList.remove("d-none");
 
     // 6. Replace the text inside the errors alert box with the errors
@@ -48,11 +56,29 @@ function register() {
     // "Please enter your first name"
     // "Please enter your last name"
     // etc.
-
     errorsAlertBox.innerHTML = errors.join("<br/>");
   } else {
-    // 7. Make the success alert box appear
-    var successAlertBox = document.getElementsByClassName("alert-success")[0];
-    successAlertBox.classList.remove("d-none");
+    // https://formspree.io/f/maykakep
+
+    let formData = new FormData();
+
+    formData.append("firstname", firstNameField.value);
+    formData.append("lastname", lastNameField.value);
+    formData.append("email", emailField.value);
+    formData.append("password", passwordField.value);
+
+    fetch("https://formspree.io/f/maykakep", {
+      method: "POST",
+      body: formData,
+    })
+      .then(function (response) {
+        successAlertBox.classList.remove("d-none");
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 }
+
+var successAlertBox = document.getElementsByClassName("alert-success")[0];
+successAlertBox.className = "alert alert-success mt-3 d-none";
