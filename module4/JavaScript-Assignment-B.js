@@ -53,9 +53,15 @@ house["areas"]["bedroomOne"]["items"].pop();
 // (4) Change the color of the car to blue.
 house["garage"]["car"]["color"] = "blue";
 
-// (5) Add a another car to the garage with a honk function.
+// (5) Add a another car to the garage with a honk function?
+// house.garage.newCar = {
+//   color: "black",
+//   wheels: 6,
+//   honk: () => alert("Beep"),
+// };
 
 // (6) Make the new car honk.
+// console.log(house.garage.newCar.honk());
 
 // (7) If the house has a garden, console.log the name of the flower.
 
@@ -78,9 +84,7 @@ Object.keys(house["areas"]).length;
 const beds = Object.values(house.areas).map(
   (room) => room.items.filter((b) => b === "bed").length
 );
-const totalBeds = beds.reduce(function (sum, current) {
-  return sum + current;
-}, 0);
+const totalBeds = beds.reduce((prev, current) => prev + current, 0);
 console.log(totalBeds);
 
 //-------------------------------------------------------------------------------------
