@@ -58,7 +58,10 @@ house["garage"]["car"]["color"] = "blue";
 // (6) Make the new car honk.
 
 // (7) If the house has a garden, console.log the name of the flower.
-console.log(house["garden"][1]);
+
+if (house.garden[0] === true) {
+  console.log(house.garden[1]);
+}
 
 /**
  * PART II
@@ -68,13 +71,27 @@ console.log(house["garden"][1]);
 house["areas"]["kitchen"]["items"][1].replace("broken chair", "new chair");
 
 // (9) Find total number of areas in the house. Hint: Use the Object.keys() function.
-console.log(Object.keys(house["areas"]).length);
+Object.keys(house["areas"]).length;
 
 // (10) Find the total number of beds in all rooms. Hint: Use the Object.values() function.
-Object.values(house["areas"]);
 
-for (const beds in house) {
-  if (beds.hasOwnProperty(beds)) {
-    console.log("found");
-  }
-}
+const beds = Object.values(house.areas).map(
+  (room) => room.items.filter((b) => b === "bed").length
+);
+const totalBeds = beds.reduce(function (sum, current) {
+  return sum + current;
+}, 0);
+console.log(totalBeds);
+
+//-------------------------------------------------------------------------------------
+// // Get an array of all the items
+// const allItems = Object.values(house.areas)
+//   .map((area) => area.items)
+//   .flat();
+// // Filter out all the bed elements
+// const beds = allItems.filter((item) => item === "bed");
+// console.log(beds.length);
+
+// for (const data of Object.values(house.areas)) {
+//   console.log(data.items);
+// }
